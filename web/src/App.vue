@@ -1,30 +1,61 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+	<router-view />
 </template>
 
+<script>
+import store from './store';
+
+export default {
+	name: 'App',
+	mounted: function () {
+		if (window.localStorage.getItem('reserva')) {
+			store.state.dadosReserva = JSON.parse(
+				window.localStorage.getItem('reserva')
+			);
+		}
+		if (window.localStorage.getItem('usuario')) {
+			store.state.usuario = JSON.parse(window.localStorage.getItem('usuario'));
+		}
+	},
+};
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+html {
+	box-sizing: border-box;
+	font-size: 16px;
+	font-family: 'Inter', sans-serif;
+	scroll-behavior: smooth;
 }
 
-nav {
-  padding: 30px;
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+	font-weight: normal;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+		'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
+ol,
+ul {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
 }
 </style>

@@ -36,3 +36,4 @@ npm run serve
 - [Cleyton](https://github.com/rcleyton)
 - [Emmanuel Moreira](https://github.com/EmmanuelAlbuquerque)
 - [José Honorato](https://github.com/HonoratoSilva)
+- [Franklin Machado](https://github.com/franklinmachado)

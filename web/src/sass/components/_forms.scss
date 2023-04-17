@@ -1,0 +1,195 @@
+@use 'src/sass/sass-utils/_colors.scss' as v;
+
+.form_main {
+	width: 100%;
+}
+
+.form_geral {
+	display: flex;
+	max-width: 100%;
+	align-items: center;
+	flex-direction: column;
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+		align-items: stretch;
+		padding: 1rem;
+	}
+}
+
+.fraseInp {
+	flex-basis: 40%;
+}
+
+.botaoCadastro {
+	background-color: v.$yellow;
+	color: v.$dark-blue;
+	width: 50%;
+	padding: 1rem;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	font-size: 1.2rem;
+	&:hover {
+		background-color: v.$dark-blue;
+		color: v.$light-gray;
+	}
+
+	@media (max-width: 768px) {
+		width: 80%;
+	}
+}
+
+.titulo_da_secao h2 {
+	font-weight: 700;
+	color: v.$main-blue;
+}
+
+/*form*/
+.form_default {
+	margin: auto;
+	margin-top: 2%;
+	color: v.$main-blue;
+}
+
+.form_fields {
+	width: 50%;
+	margin: 1.5rem auto;
+	align-items: center;
+	border: 1px solid v.$main-blue;
+	padding: 1rem;
+
+	@media (max-width: 768px) {
+		width: 100%;
+		text-align: center;
+		margin: auto;
+	}
+}
+
+.info {
+	margin-top: 4rem;
+	text-transform: uppercase;
+	text-align: center;
+	gap: 4rem;
+	color: v.$dark-blue;
+
+	li {
+		padding: 1% 0;
+	}
+}
+
+.form_field {
+	width: 80%;
+	font-weight: 700;
+	font-size: 1rem;
+	text-transform: uppercase;
+	margin: 0.5rem auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.input_form {
+	width: 70%;
+	height: 45px;
+	margin-top: 0.2rem;
+	margin-bottom: 1rem;
+	padding: 1.2rem 0;
+	height: 30px;
+	background-color: v.$light-gray;
+	border: 0.3px solid v.$light-blue;
+	text-indent: 1rem;
+	text-align: center;
+	border-radius: 1rem;
+
+	@media (max-width: 768px) {
+		width: 100%;
+		margin: 0.5rem auto;
+	}
+}
+.form_fields textarea:focus,
+input:focus,
+select:focus {
+	border: 1px solid v.$light-blue;
+}
+
+.select {
+	width: 50%;
+	height: 45px;
+	margin-top: 10px;
+	border: 0.3px solid v.$light-blue;
+	text-indent: 1rem;
+	color: v.$dark-blue;
+	background: v.$light-gray;
+	border-radius: 1rem;
+}
+
+.upload {
+	width: 80%;
+	font-weight: 700;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	margin: 1rem auto;
+	text-align: center;
+}
+
+.select_image {
+	background-color: v.$dark-blue;
+	color: v.$light-gray;
+	padding: 2rem;
+	font-size: 1.2rem;
+	border-radius: 0.3rem;
+	cursor: pointer;
+	margin: auto;
+	margin: 1rem 0 1rem 0;
+}
+
+.section_title {
+	font-size: 2rem;
+	text-align: center;
+	font-weight: bold;
+}
+
+.text_area {
+	width: 70%;
+	font-size: 1rem;
+	height: 20%;
+	margin-top: 10px;
+	padding: 0.8rem;
+	border: 0.5px solid v.$main-blue;
+	border-radius: 1rem;
+	resize: none;
+	background: v.$light-gray;
+	@media (max-width: 768px) {
+		width: 100%;
+		margin: auto;
+	}
+}
+
+.button_form {
+	background-color: v.$yellow;
+	color: v.$dark-blue;
+	padding: 1rem;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	font-size: 1.5rem;
+	&:hover {
+		background-color: v.$dark-blue;
+		color: v.$light-gray;
+	}
+
+	@media (max-width: 768px) {
+		width: 80%;
+	}
+}
+
+.form_fields button:hover {
+	background-color: v.$dark-blue;
+}
+.form_fields:hover {
+	opacity: 0.9;
+	transition: 0.5s;
+}
